@@ -1,0 +1,7 @@
+Header set Access-Control-Allow-Origin http://signs.pilotpen.com
+Header always set Access-Control-Allow-Methods "POST, GET"
+
+RewriteEngine On
+
+# Resolve .php file for extensionless php urls
+RewriteRule ^([^/.]+)\.json$ json.php?include=$1.php [L]
