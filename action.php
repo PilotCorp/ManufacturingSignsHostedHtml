@@ -23,6 +23,23 @@
       exec('(/home/pi/videoplayer &) > /dev/null');
       echo json_encode("done");
       break;
+    case 'tvon':
+    case 'on':
+      exec('echo "on 0" > /dev/cec');
+      echo json_encode("done");
+      break;
+    case 'tvoff':
+    case 'off':
+    case 'tvstandby':
+    case 'standby':
+      exec('echo "standby 0" > /dev/cec');
+      echo json_encode("done");
+      break;
+    case 'autosource':
+    case 'as':
+      exec('echo "as" > /dev/cec');
+      echo json_encode("done");
+      break;
     default:
       echo json_encode("'$action' not recognized");
   }
