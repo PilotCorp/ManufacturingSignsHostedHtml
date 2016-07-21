@@ -1,4 +1,4 @@
-Header set Access-Control-Allow-Origin http://signs.pilotpen.com
+Header set Access-Control-Allow-Origin https://signs.pilotpen.com
 Header always set Access-Control-Allow-Methods "POST, GET"
 
 RewriteEngine On
