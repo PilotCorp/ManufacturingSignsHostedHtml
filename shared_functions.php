@@ -9,7 +9,7 @@
   }
 
   function get_bootSite() {
-    return preg_pop_file('/iceweasel ([\w\/\:\.\,]+) /', '/home/pi/.config/lxsession/LXDE-pi/autostart')[1];
+    return trim(file_get_contents('/var/local/url'));
   }
 
   function get_rotation() {
